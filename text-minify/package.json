@@ -1,0 +1,65 @@
+{
+    "name": "text-minify",
+    "displayName": "Text Minify",
+    "description": "Minify JS/CSS, encrypt and obfuscate JS",
+    "version": "0.0.2",
+    "license": "MIT",
+    "publisher": "lxhao",
+    "engines": {
+        "vscode": "^1.80.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:text-minify.minify",
+        "onCommand:text-minify.encrypt",
+        "onCommand:text-minify.obfuscate",
+        "onSaveTextDocument"
+    ],
+    "main": "./extension.js",
+    "scripts": {
+        "vscode:prepublish": "echo 'Preparing package for VSCode marketplace'",
+        "package": "vsce package"
+    },
+    "devDependencies": {
+        "vsce": "^2.12.0",
+        "vscode": "^1.1.37"
+    },
+    "dependencies": {
+        "clean-css": "^5.3.3",
+        "crypto-js": "^4.1.1",
+        "javascript-obfuscator": "^4.1.1",
+        "terser": "^5.20.0"
+    },
+    "contributes": {
+        "commands": [
+            {
+                "command": "text-minify.minify",
+                "title": "Minify JS/CSS"
+            },
+            {
+                "command": "text-minify.encrypt",
+                "title": "Encrypt JS"
+            },
+            {
+                "command": "text-minify.obfuscate",
+                "title": "Obfuscate JS"
+            }
+        ],
+        "keybindings": [
+            {
+                "command": "text-minify.minify",
+                "key": "ctrl+shift+alt+m"
+            },
+            {
+                "command": "text-minify.encrypt",
+                "key": "ctrl+shift+alt+e"
+            },
+            {
+                "command": "text-minify.obfuscate",
+                "key": "ctrl+shift+alt+u"
+            }
+        ]
+    }
+}
