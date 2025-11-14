@@ -2,7 +2,7 @@
     "name": "text-minify",
     "displayName": "Text Minify",
     "description": "Minify JS/CSS, encrypt and obfuscate JS",
-    "version": "0.0.2",
+    "version": "0.1.7",
     "license": "MIT",
     "publisher": "lxhao",
     "engines": {
@@ -11,11 +11,13 @@
     "categories": [
         "Other"
     ],
+    "icon": "text-minify.png",
     "activationEvents": [
+        "onStartupFinished",
         "onCommand:text-minify.minify",
-        "onCommand:text-minify.encrypt",
-        "onCommand:text-minify.obfuscate",
-        "onSaveTextDocument"
+        "onLanguage:javascript",
+        "onLanguage:css",
+        "onLanguage:json"
     ],
     "main": "./extension.js",
     "scripts": {
@@ -37,29 +39,11 @@
             {
                 "command": "text-minify.minify",
                 "title": "Minify JS/CSS"
-            },
-            {
-                "command": "text-minify.encrypt",
-                "title": "Encrypt JS"
-            },
-            {
-                "command": "text-minify.obfuscate",
-                "title": "Obfuscate JS"
-            }
-        ],
-        "keybindings": [
-            {
-                "command": "text-minify.minify",
-                "key": "ctrl+shift+alt+m"
-            },
-            {
-                "command": "text-minify.encrypt",
-                "key": "ctrl+shift+alt+e"
-            },
-            {
-                "command": "text-minify.obfuscate",
-                "key": "ctrl+shift+alt+u"
             }
         ]
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/hoolluo/vscode-plugins.git"
     }
 }
