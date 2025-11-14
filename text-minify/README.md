@@ -1,6 +1,6 @@
 # Text Minify
 
-A lightweight VSCode extension that automatically generates **`.min.js`** and **`.min.css`** files on save.
+A lightweight VSCode extension that automatically generates **`.min.js`** , **`.min.css`**, **`.min.json`** files on save.
 
 Supports ES6+, modern JavaScript operators (including **`??`**), and **CSS** compression.
 
@@ -11,6 +11,7 @@ Supports ES6+, modern JavaScript operators (including **`??`**), and **CSS** com
 
 * Automatically generate `*.min.js` on save
 * Automatically generate `*.min.css` on save
+* Automatically generate `*.min.json` on save
 * Supports ES6+, optional chaining, nullish coalescing (`??`)
 * Uses **Terser** for JS and **clean-css** for CSS
 * Customizable minified file suffix (default: `.min`)
@@ -25,7 +26,8 @@ In VSCode `settings.json`:
 
 ```json
 {
-  "textMinify.minSuffix": ".min"
+    "textMinify.suffix": "min", // 自定义压缩文件后缀
+    "textMinify.dropConsole": true // 是否删除 console.log
 }
 ```
 
@@ -39,7 +41,7 @@ Change `.min` to your own suffix, such as `.compressed`.
 
 # 文本压缩
 
-一个轻量级的 VSCode 扩展，可在保存时自动生成 **`.min.js`** 和 **`.min.css`** 文件。
+一个轻量级的 VSCode 扩展，可在保存时自动生成 **`.min.js`** 、 **`.min.css`** 、 **`.min.json`** 文件。
 
 支持 ES6+、现代 JavaScript 运算符（包括 **`??`**）和 CSS 压缩。
 
@@ -51,6 +53,8 @@ Change `.min` to your own suffix, such as `.compressed`.
 * 保存时自动生成 `*.min.js` 文件
 
 * 保存时自动生成 `*.min.css` 文件
+
+* 保存时自动生成 `*.min.json` 文件
 
 * 支持 ES6+、可选链式调用和空值合并（`??`）
 
@@ -70,8 +74,8 @@ Change `.min` to your own suffix, such as `.compressed`.
 
 ```json
 {
-"textMinify.minSuffix": ".min"
-
+    "textMinify.suffix": "min", // 自定义压缩文件后缀
+    "textMinify.dropConsole": true // 是否删除 console.log
 }
 ```
 

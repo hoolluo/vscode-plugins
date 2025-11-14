@@ -2,7 +2,7 @@
     "name": "text-minify",
     "displayName": "Text Minify",
     "description": "Minify JS/CSS, encrypt and obfuscate JS",
-    "version": "0.1.7",
+    "version": "0.1.9",
     "license": "MIT",
     "publisher": "lxhao",
     "engines": {
@@ -38,9 +38,25 @@
         "commands": [
             {
                 "command": "text-minify.minify",
-                "title": "Minify JS/CSS"
+                "title": "Minify JS/CSS/JSON"
             }
-        ]
+        ],
+        "configuration": {
+            "type": "object",
+            "title": "Text Minify Settings",
+            "properties": {
+                "textMinify.suffix": {
+                    "type": "string",
+                    "default": "min",
+                    "description": "Custom suffix for minified files"
+                },
+                "textMinify.dropConsole": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Remove console.log in JavaScript"
+                }
+            }
+        }
     },
     "repository": {
         "type": "git",
