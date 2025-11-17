@@ -2,7 +2,7 @@
     "name": "text-minify",
     "displayName": "Text Minify",
     "description": "Minify JS/CSS/JSON files",
-    "version": "0.1.25",
+    "version": "0.1.28",
     "license": "MIT",
     "publisher": "lxhao",
     "engines": {
@@ -53,6 +53,26 @@
                     "type": "boolean",
                     "default": false,
                     "description": "Remove console.log in JavaScript"
+                },
+                "textMinify.fileExtensions": {
+                    "type": "object",
+                    "default": {
+                        "css": true,
+                        "js": true,
+                        "json": true
+                    },
+                    "description": "Enable/disable minification by file type",
+                    "properties": {
+                        "css": {
+                            "type": "boolean"
+                        },
+                        "js": {
+                            "type": "boolean"
+                        },
+                        "json": {
+                            "type": "boolean"
+                        }
+                    }
                 }
             }
         }
