@@ -1,8 +1,8 @@
 {
     "name": "text-minify",
     "displayName": "Text Minify",
-    "description": "Minify JS/CSS, encrypt and obfuscate JS",
-    "version": "0.1.18",
+    "description": "Minify JS/CSS/JSON files",
+    "version": "0.1.25",
     "license": "MIT",
     "publisher": "lxhao",
     "engines": {
@@ -29,13 +29,8 @@
         "vscode": "^1.1.37"
     },
     "dependencies": {
-        "@babel/core": "^7.28.5",
-        "@babel/generator": "^7.28.5",
-        "@babel/parser": "^7.28.5",
-        "@babel/traverse": "^7.28.5",
         "clean-css": "^5.3.3",
         "crypto-js": "^4.1.1",
-        "javascript-obfuscator": "^4.1.1",
         "terser": "^5.44.1"
     },
     "contributes": {
@@ -58,11 +53,6 @@
                     "type": "boolean",
                     "default": false,
                     "description": "Remove console.log in JavaScript"
-                },
-                "textMinify.obfuscate": {
-                    "type": "boolean",
-                    "default": false,
-                    "description": "Lightweight function parameter obfuscation (tool.lu style)"
                 }
             }
         }
