@@ -26,8 +26,13 @@ In VSCode `settings.json`:
 
 ```json
 {
-    "textMinify.suffix": "min", // 自定义压缩文件后缀
-    "textMinify.dropConsole": true // 是否删除 console.log
+    "textMinify.suffix": "min", 
+    "textMinify.dropConsole": true, 
+    "textMinify.fileExtensions": {
+        "css":true,
+        "js": true,
+        "json": true,
+    },
 }
 ```
 
@@ -75,7 +80,12 @@ Change `.min` to your own suffix, such as `.compressed`.
 ```json
 {
     "textMinify.suffix": "min", // 自定义压缩文件后缀
-    "textMinify.dropConsole": true // 是否删除 console.log
+    "textMinify.dropConsole": true, // 是否删除 console.log
+    "textMinify.fileExtensions": {
+        "css":true,
+        "js": true,
+        "json": true,
+    },
 }
 ```
 

@@ -2,7 +2,7 @@
     "name": "text-minify",
     "displayName": "Text Minify",
     "description": "Minify JS/CSS/JSON files",
-    "version": "0.1.28",
+    "version": "0.2.1",
     "license": "MIT",
     "publisher": "lxhao",
     "engines": {
